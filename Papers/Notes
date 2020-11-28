@@ -11,3 +11,6 @@ If we take voids to be the dominant dynamical component of the univsersee the la
 Say there is some cosmic process (the origin and properties of this process is sort of mysterious to my knowledge) that produces regions where the density is lower than usual. Then any matter in these regions will flow away from the voids until they encounter similar material flowing from an adjacent void. 
 
 These underdense regions are the "seeds" of the voids. In 3D a voronoi foam is packing vornoi cells with each cell being a convex polyhedron enclosed by bisecting planes between the nuclei and the neihbors. A voronoi foam simulation consists of 4 parts polyhedral cells (voids), the walls (pancakes), edges (filaments) where 3 walls intersect, and nodes (clusters) where four filaments come toghether. 
+
+
+Paper for Kinematic Voronoi Model
