@@ -115,7 +115,7 @@ def plot_voronoi_2d(voro, galaxies, file_name=None, plot_voronoi=True):
 
     plt.close()
 
-def generate_time_series_voronoi_2d(num_nuclei=5, mean_density=5, edge_length=1, simulation_name='test'):
+def generate_time_series_voronoi_2d(num_nuclei=5, mean_density=5, edge_length=1, simulation_name='test', plot=False):
     """ 
 
     Implementation of https://academic.oup.com/mnras/article/380/2/551/1010947#91677586 appendix C
@@ -220,9 +220,10 @@ def generate_time_series_voronoi_2d(num_nuclei=5, mean_density=5, edge_length=1,
             uv_vert = (closest_vert - galaxies) / 100 
             galaxies[np.logical_not(global_mask)] = galaxies[np.logical_not(global_mask)] + void_expansion(t, 'vertex')*uv_vert[np.logical_not(global_mask)]
 
-
-            plot_voronoi_2d(voro, galaxies, os.path.join(os.path.dirname(__file__), 'data', f'{simulation_name}', 'frames_vor', f"{t:03d}"), plot_voronoi=True)
-            plot_voronoi_2d(voro, galaxies, os.path.join(os.path.dirname(__file__), 'data', f'{simulation_name}', 'frames_gal', f"{t:03d}"), plot_voronoi=False)
+            if plot:
+                plot_voronoi_2d(voro, galaxies, os.path.join(os.path.dirname(__file__), 'data', f'{simulation_name}', 'frames_vor', f"{t:03d}"), plot_voronoi=True)
+                plot_voronoi_2d(voro, galaxies, os.path.join(os.path.dirname(__file__), 'data', f'{simulation_name}', 'frames_gal', f"{t:03d}"), plot_voronoi=False)
+                
             galaxy_locations.append((t, galaxies.copy()))
 
 

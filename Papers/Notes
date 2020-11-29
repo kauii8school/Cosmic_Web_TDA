@@ -14,3 +14,7 @@ These underdense regions are the "seeds" of the voids. In 3D a voronoi foam is p
 
 
 Paper for Kinematic Voronoi Model
+
+Previous methods like VoidFinder and Dynamical Void Analysis offer very fast ways to compute void locations and spatial positions of voids, but don't do much in the way of topology. In addition, incorporating the results of these void finding algorithms into machine learning is challenging
+
+The evolution of a void's shape is in part the result of the expansion of the universe. Since this acceleration is believed to be caused by dark energy, studying the changes of a void's shape over a period of time can be used to constrain the standard ΛCDM model
