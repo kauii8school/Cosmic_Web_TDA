@@ -1,7 +1,11 @@
+import os 
+
 import matplotlib.pyplot as plt
 
-from cwtda.tda import kinematic_voronoi_foam_analysis as kvfa 
-from cwtda.kinematic_voronoi_foams import kinematic_voronoi as kv 
+# from cwtda.tda import kinematic_voronoi_foam_analysis as kvfa 
+# from cwtda.kinematic_voronoi_foams import kinematic_voronoi as kv 
+from cwtda.concept import dataio, plotting
+from cwtda import config
 
 data_folder_name = 'test'
 
@@ -22,7 +26,13 @@ data_folder_name = 'test'
 # kvfa.plot_persistance_landscape(pl_x, mean_1, ax=axs[0])
 # kvfa.plot_persistance_landscape(pl_x, mean_15, ax=axs[1], show=True)
 
-pl_x_lst, pl_lst = kvfa.load_persistance_landscapes()
-kvfa.nn(pl_lst, show_score=True)
+# pl_x_lst, pl_lst = kvfa.load_persistance_landscapes()
+# kvfa.nn(pl_lst, show_score=True)
+
+# sim_dir = os.path.join(config.CONCEPT_INSTALL_DIR, 'output', 'test_pl')
+# out_path = os.path.join(config.CWTDA_DIR, '..', 'Plots', '3Drender.gif')
+# plotting.render_3D_gif(sim_dir, out_path)
+
+dataio.load_data(os.path.join(config.CONCEPT_INSTALL_DIR, 'output', 'test_pl'))
 
  #ffmpeg -r 5 -f image2 -s 1920x1080 -i %03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p test.mp4

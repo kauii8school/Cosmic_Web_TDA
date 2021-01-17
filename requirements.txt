@@ -1,12 +1,10 @@
 absl-py==0.11.0
 addict==2.4.0
-appdirs @ file:///home/conda/feedstock_root/build_artifacts/appdirs_1603108395799/work
 argon2-cffi==20.1.0
 astunparse==1.6.3
 async-generator==1.10
 attrs==20.3.0
 backcall==0.2.0
-black @ file:///home/conda/feedstock_root/build_artifacts/black-recipe_1599478779128/work
 bleach==3.2.1
 cachetools==4.1.1
 certifi==2020.11.8
@@ -38,12 +36,9 @@ jupyter-core==4.7.0
 jupyterlab-pygments==0.1.2
 Keras==2.4.3
 Keras-Preprocessing==1.1.2
-kiwisolver @ file:///home/conda/feedstock_root/build_artifacts/kiwisolver_1604322295622/work
 Markdown==3.3.3
 MarkupSafe==1.1.1
-matplotlib @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-suite_1604870968348/work
 mistune==0.8.4
-mypy-extensions @ file:///home/conda/feedstock_root/build_artifacts/mypy_extensions_1603201792058/work
 nbclient==0.5.1
 nbconvert==6.0.7
 nbformat==5.0.8
@@ -52,17 +47,14 @@ nose==1.3.7
 notebook==6.1.5
 numpy==1.18.5
 oauthlib==3.1.0
-olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
 open3d==0.11.2
 opt-einsum==3.3.0
 packaging==20.4
 pandas==1.1.4
 pandocfilters==1.4.3
 parso==0.7.1
-pathspec @ file:///home/conda/feedstock_root/build_artifacts/pathspec_1605120834673/work
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow @ file:///home/conda/feedstock_root/build_artifacts/pillow_1604748700719/work
 plyfile==0.7.2
 prometheus-client==0.9.0
 prompt-toolkit==3.0.8
@@ -78,14 +70,12 @@ python-dateutil==2.8.1
 pytz==2020.4
 PyYAML==5.3.1
 pyzmq==20.0.0
-regex @ file:///home/conda/feedstock_root/build_artifacts/regex_1605270917814/work
 requests==2.25.0
 requests-oauthlib==1.3.0
 rsa==4.6
 scikit-learn==0.23.2
 scipy==1.5.4
 Send2Trash==1.5.0
-six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
 sklearn==0.0
 tensorboard==2.4.0
 tensorboard-plugin-wit==1.7.0
@@ -95,12 +85,8 @@ termcolor==1.1.0
 terminado==0.9.1
 testpath==0.4.4
 threadpoolctl==2.1.0
-toml @ file:///home/conda/feedstock_root/build_artifacts/toml_1604308577558/work
-tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1604105045397/work
 tqdm==4.53.0
 traitlets==5.0.5
-typed-ast @ file:///home/conda/feedstock_root/build_artifacts/typed-ast_1604870691920/work
-typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1602702424206/work
 urllib3==1.26.2
 wcwidth==0.2.5
 webencodings==0.5.1

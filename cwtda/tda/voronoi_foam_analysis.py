@@ -39,7 +39,6 @@ def load_data(data_folder_name):
 
     return seeds, beams
 
-
 def plot_data(data_folder_name):
     load_data(data_folder_name)
     seeds, beams = load_data(data_folder_name)
