@@ -6,6 +6,7 @@ import h5py
 import numpy as np
 
 from .. import config
+from .. import learn
 
 class ConceptSimulationSnap():
     def __init__(self, snapshot_fn, pwr_fn):
@@ -46,6 +47,7 @@ class ConceptSimulationSnap():
                 pos = np.c_[ds_data['posx'], ds_data['posy'], ds_data['posz']]
         
         self.pos = pos 
+        self.pos_2d = np.delete(self.pos, 0, 1)
 
         # Iterating through parameter file and getting log data
         with open(param_filepath) as f:
@@ -85,9 +87,22 @@ class ConceptSimulationSnap():
                 a_begin_str = a_begin_str.group(0)
                 self.a_begin = float(re.sub(r'Ωcdm += ', '', a_begin_str))
 
+    def subsample(self, subsample_percent):
+        index = np.random.choice(self.pos.shape[0], int(subsample_percent * self.pos.shape[0]), replace=False)
+        print(index)
+         # self.pos_subsample = self.
+        # self.pos_2d_subsample = self.
+
+    def create_pl(self, subsample_percent=1e-5):
+
+        learn.tda.point_cloud_to_pl(self.pos)
+
 def load_data(path):
     snapshot_fn_lst = [f for f in sorted(glob.glob(f'{path}/snapshot*'), key=os.path.getmtime)]
     pwr_fn_lst = [f for f in sorted(glob.glob(f'{path}/powerspec*'), key=os.path.getmtime)]
 
+    concept_sim_snap_lst = []
     for snapshot_fn, pwr_fn in zip(snapshot_fn_lst, pwr_fn_lst):
-        ConceptSimulationSnap(snapshot_fn, pwr_fn)
+        concept_sim_snap_lst.append(ConceptSimulationSnap(snapshot_fn, pwr_fn))
+    
+    return concept_sim_snap_lst
